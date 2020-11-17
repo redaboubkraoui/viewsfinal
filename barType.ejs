@@ -1,0 +1,144 @@
+<html>
+<head>
+    <title>New Bar | Announcment Bar Builder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/uptown.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/jquery-modal.min.css" />
+
+    <script src="js/jquery-modal.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <link rel="preload" href="./images/bartype-announcement.png" as="image" />
+    <link rel="preload" href="./images/bartype-countdown-timer.png" as="image" />
+    <link rel="preload" href="./images/bartype-multi.png" as="image" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
+    <link rel="manifest" href="">
+    <link rel="mask-icon" href="" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+<div class="header-container">
+    <div class="header-bar">
+        <span class="apphero-logo"></span>
+
+    </div>
+</div>
+
+<div class="side-bar">
+    <div class="app-block-holder">
+        <div class='app-block'>
+            <span class="app-block-logo" style="background-image:url('https://apps.shopifycdn.com/listing_images/9c396fcdde632fcb6d226b61f3f5ee71/icon/b06af5b86cb6dc95b286dff5e50dec33.jpg?height=168&quality=90&width=168')"></span>
+            <p>
+                Announcement Bar Builder ‑ Top</p>
+        </div>
+    </div>
+    <div class="more-apps-holder">
+        <span class="more-apps-title">MORE APPS</span>
+        <a href="https://apps.shopify.com/budget-trust" target="_blank" class='more-apps-block'>
+
+            <span class="more-apps-logo" style="background-image:url('https://apps.shopifycdn.com/listing_images/02afe5a6988e88e73acf7f6a90641fcc/icon/01f3c8d45e147ee7cf097ba2d4fd3c7d.png?height=168&width=168')"></span>
+            <p>TRUSTY ONE‑Trust Badges Icons</p>
+            <span class="more-apps-price">Free</span>
+            <span class="more-apps-description">Product Badges-Over 1200 payment badges and icons</span>
+        </a>
+        <a href="https://apps.shopify.com/budget-trust" target="_blank" class='more-apps-block'>
+            <span class="more-apps-logo" style="background-image:url('https://apps.shopifycdn.com/listing_images/67c280a9e06de424c882c9e641479e21/icon/a1f86ef0c6d834b5c0b5ec3c671c633e.png?height=168&width=168')"></span>
+            <p>TheBadges‑Payment Icons Footer</p>
+            <span class="more-apps-price">Free</span>
+            <span class="more-apps-description">Add, remove and reorganize payment icons in store footer</span>
+        </a>
+    </div>
+</div>
+
+<div class="main-content">
+
+    <div class="content-menu-holder">
+        <div class="content-menu">
+            <ul class="menu-items">
+                <li class="item-dashboard selected"><a href="settings">Dashboard</a></li>
+                <li class="item-help"><a href="mailto:contact@salbimy.app" target="_blank">Help</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <section class="bartype-section">
+        <h1 class="barType_heading">Select Bar Type</h1>
+        <div class="card bartype-card" data-target="announcement" onClick="barTypeClick(this,1)">
+            <div class="bartype-icon" style="background:url('./images/bartype-announcement.png') left top / 75px 51px no-repeat;">
+            </div>
+            <div class="bartype-title">
+                Announcement Bar
+            </div>
+
+            <div class="bartype-subtitle">
+                Display announcements, offers and special events
+            </div>
+
+            <div class="example-link">
+            </div>
+
+        </div>
+
+
+
+        <div class="card bartype-card" data-target="multi" onClick="barTypeClick(this, 1)">
+            <div class="bartype-icon" style="background:url('./images/bartype-multi.png') left top / 75px 51px no-repeat;">
+            </div>
+            <div class="bartype-title">
+                Multi Announcements Bar
+            </div>
+
+            <div class="bartype-subtitle">
+                Display rotating multi messages using the same bar
+            </div>
+            <div class="example-link">
+            </div>
+
+
+        </div>
+
+        <div class="card bartype-card" data-target="counter" onClick="barTypeClick(this, 1)">
+            <div class="bartype-icon" style="background:url('./images/bartype-countdown-timer.png') left top / 75px 51px no-repeat;">
+            </div>
+            <div class="bartype-title">
+                Countdown Timer Bar
+            </div>
+
+            <div class="bartype-subtitle">
+                Display announcements and offers with a countdown timer
+            </div>
+            <div class="example-link">
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+    <div id="ex1" class="mod">
+        <!--<div class="pop-bg"></div>-->
+
+        <h1 class="mod-title"></h1>
+        <p class="mod-body"></p>
+
+        <div class="modal-upgrade">
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

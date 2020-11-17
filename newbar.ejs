@@ -1,0 +1,802 @@
+<html>
+<head>
+    <title>New Bar | Announcment Bar Builder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+    <script>
+        $(document).ready(function(){
+            update_iframe('new_bar',false,0);
+            syncHeights($('#new_bar'));
+
+        });
+
+    </script>
+
+    <script src="js/jscolor.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fontselect.min.js"></script>
+    <script type="text/javascript" src="js/icon-selector.min.js"></script>
+    <script type="text/javascript" src="js/rangeslider.min.js"></script>
+
+    <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
+    <script type="text/javascript" src="js/selectize.min.js"></script>
+    <script src="js/jquery-modal.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="css/uptown.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bar_prev.css" />
+    <link type="text/css" rel="stylesheet" href="css/fontselect.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.fonticonpicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.fonticonpicker.grey.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/rangeslider.min.css" />
+    <link rel="stylesheet" href="css/icon-selector.min.css" />
+    <link rel="stylesheet" href="css/selectize.css" />
+    <link rel="stylesheet" href="css/jquery-modal.min.css" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+<style>
+    .section-container.section-wrapper.message-wrapper.left-align {
+        height: 300px !important;
+    }
+</style>
+
+
+<div class="header-container">
+    <div class="header-bar">
+        <span class="apphero-logo"></span>
+
+    </div>
+</div>
+
+<div class="side-bar">
+    <div class="app-block-holder">
+        <div class='app-block'>
+            <span class="app-block-logo" style="background-image:url('https://apps.shopifycdn.com/listing_images/9c396fcdde632fcb6d226b61f3f5ee71/icon/b06af5b86cb6dc95b286dff5e50dec33.jpg?height=168&quality=90&width=168')"></span>
+            <p>
+                Announcement Bar Builder ‑ Top</p>
+        </div>
+    </div>
+    <div class="more-apps-holder">
+        <span class="more-apps-title">MORE APPS</span>
+        <a href="https://apps.shopify.com/budget-trust" target="_blank" class='more-apps-block'>
+
+            <span class="more-apps-logo" style="background-image:url('https://apps.shopifycdn.com/listing_images/02afe5a6988e88e73acf7f6a90641fcc/icon/01f3c8d45e147ee7cf097ba2d4fd3c7d.png?height=168&width=168')"></span>
+            <p>TRUSTY ONE‑Trust Badges Icons</p>
+            <span class="more-apps-price">Free</span>
+            <span class="more-apps-description">Product Badges-Over 1200 payment badges and icons</span>
+        </a>
+        <a href="https://apps.shopify.com/budget-trust" target="_blank" class='more-apps-block'>
+            <span class="more-apps-logo" style="background-image:url('https://apps.shopifycdn.com/listing_images/67c280a9e06de424c882c9e641479e21/icon/a1f86ef0c6d834b5c0b5ec3c671c633e.png?height=168&width=168')"></span>
+            <p>TheBadges‑Payment Icons Footer</p>
+            <span class="more-apps-price">Free</span>
+            <span class="more-apps-description">Add, remove and reorganize payment icons in store footer</span>
+        </a>
+    </div>
+</div>
+
+
+<div class="main-content">
+    <div class="content-menu-holder">
+        <div class="content-menu">
+            <ul class="menu-items">
+                <li class="item-dashboard selected"><a href="settings">Dashboard</a></li>
+                <li class="item-help"><a href="mailto:contact@salbimy.app" target="_blank">Help</a></li>
+            </ul>
+
+        </div>
+    </div>
+    <section class="preview-section">
+        <div class="card preview-card" style="height:79px;">
+            <p>PREVIEW</p>
+            <!--  <iframe id="iframenew_bar" src="" class="preview_frame" onload="resizeIframe(this);" scrolling="no"></iframe>-->
+        </div>
+    </section>
+
+
+    <section id="new_bar" data-type="single">
+        <div class="content-menu-holder">
+            <div class="content-menus">
+                <ul class="menu-items">
+                    <li class="item-dashboard" id ="op-1"><span >Message Settings</span></li>
+                    <li class="item-help" id ="op-2"><span>Basic Settings</span></li>
+                    <li class="item-help" id ="op-3"><span>Targeting</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-container container-edit message-element" id="op-1-text" data-state="open">
+
+            <h4>Message Settings</h4>
+            <p>Edit your message, font and icon</p>
+            <div class="card">
+
+
+                <div class="section-container section-wrapper message-wrapper left-align" style="padding-top: 10px;">
+                    <h6>Announcement</h6>
+                    <label>Message:</label>
+                    <div class="row side-elements message-row">
+
+                        <p class="barText" contenteditable >Your Message Goes Here</p>
+                        <button class="bold-btn secondary" style='font-family:"Times New Roman", Times, serif; font-weight:bold;'>B</button>
+                        <button class="italic-btn secondary" style='font-family:"Times New Roman", Times, serif; font-weight:bold; font-style:italic;'>I</button>
+                        <!--<input type="text" value="" class="barText"/>-->
+                    </div>
+
+
+
+                    <div class="row">
+                        <label>Font Style:</label>
+                        <div class="column twelve">
+                            <input class="fonts" name="fonts" id="fonts" value="Helvetica"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label>Font Size:</label>
+                        <select class="font-size">
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16" selected>16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                        </select>
+                    </div>
+                    <div class="row side-elements">
+                        <label >Text Color:</label>
+                        <input class="jscolor textColor colorShapes" id="textColor" value="e6e6e6"/>
+                    </div>
+
+                </div>
+
+                <div class="section-container container-edit right-align" style="padding-top:13px;">
+                    <h6>Call To Action</h6>
+                    <p>Encourage visitors to take action</p>
+
+
+                    <div class="section-wrapper">
+                        <div class="row">
+                            <label>Call To Action Type:</label>
+                            <select class="call_to_action_selector">
+                                <option  class="cta_radio"  value="0" selected />Disabled</option>
+                                <option  class="cta_radio"  value="1" />Make entire bar clickable</option>
+                                <option  class="cta_radio"  value="2" />Add button on the bar</option>
+                                <option class="cta_radio"  value="3" />Add a simple link</option>
+                                <option  class="cta_radio"  value="4" />Add coupon placement</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="section-wrapper clickable_bar_prefs">
+
+                        <div class="row">
+                            <label>Click Target URL:</label>
+                            <input type="text" class="barTarget" value="" placeholder="http://yourawesomeshop.com"/>
+                        </div>
+                        <div class="row">
+                            <label>Link Behaviour:</label>
+                            <select class="linkType">
+                                <option value="same" selected>Open link in the same window</option>
+                                <option value="new">Open link in a new window</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="section-wrapper button_prefs">
+
+                        <div class="row">
+                            <label>Button Text:</label>
+                            <input type="text" class="btnText" value="Learn More" maxlength="16"/>
+
+                        </div>
+                        <div class="row">
+                            <label>Button Style:</label>
+                            <select class="button_style">
+                                <option value="solid">Square Solid</option>
+                                <option value="hollow">Square Hollow</option>
+                                <option value="rounded-solid-btn" selected>Rounded Solid</option>
+                                <option value="rounded-hollow-btn">Rounded Hollow</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <label>Button Target URL:</label>
+                            <input type="text" class="btnTarget" value="" placeholder="http://yourawesomeshop.com" />
+                        </div>
+                        <div class="row">
+                            <label>Link Behaviour:</label>
+                            <select class="linkType">
+                                <option value="same">Open link in the same window</option>
+                                <option value="new">Open link in a new window</option>
+                            </select>
+                        </div>
+                        <div class="row side-elements">
+
+                            <label>Button Color:</label>
+                            <input class="jscolor btnColor colorShapes" value="ebc73a"/>
+
+
+                            <label style="margin-left:3em">Button Text Color:</label>
+                            <input class="jscolor btnTextColor colorShapes" value="000000"/>
+
+                        </div>
+                    </div>
+
+                    <div class="section-wrapper slink_prefs">
+
+                        <div class="row">
+                            <label>Link Text:</label>
+                            <input type="text" class="slinkText" value="Learn more"/>
+
+                        </div>
+                        <div class="row">
+                            <label>Link Target URL:</label>
+                            <input type="text" class="slinkTarget" value="" placeholder="http://yourawesomeshop.com"/>
+                        </div>
+                        <div class="row">
+                            <label>Link Behaviour:</label>
+                            <select class="linkType">
+                                <option value="same">Open link in the same window</option>
+                                <option value="new">Open link in a new window</option>
+                            </select>
+                        </div>
+                        <div class="row side-elements">
+
+                            <label>Link Text Color:</label>
+                            <input class="jscolor slinkTextColor colorShapes" value="e6e6e6"/>
+
+                        </div>
+                    </div>
+
+                    <div class="section-wrapper coupon_prefs">
+
+                        <div class="row">
+                            <label>Coupon Text:</label>
+                            <input type="text" class="couponText" value="SUMMER50"/>
+
+                        </div>
+
+                        <div class="row">
+                            <label>Coupon Style:</label>
+                            <select class="coupon_style">
+                                <option value="square-dashed">Square Dashed</option>
+                                <option value="square-solid">Square Solid</option>
+                                <option value="rounded-dashed">Rounded Dashed</option>
+                                <option value="rounded-solid">Rounded Solid</option>
+                            </select>
+                        </div>
+
+                        <div class="row side-elements">
+
+                            <label>Border Color:</label>
+                            <input class="jscolor couponColor colorShapes" value="FFE746"/>
+
+
+                            <label style="margin-left:3em">Text Color:</label>
+                            <input class="jscolor couponTextColor colorShapes" value="e6e6e6"/>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="section-container section-wrapper left-align" style="clear:left; padding-top:15px;">
+                    <h6>ICON</h6>
+                    <p>Add an icon next to your message</p>
+                    <div class="row">
+                        <label style="display:none;"><input id="hasIcon" class="hasIcon" type="checkbox" checked/>
+                            Show Icon</label>
+                    </div>
+
+                    <div class="row side-elements">
+                        <label>Icon Style:</label>
+
+                        <i class="icon-preview-holder"></i>
+                        <i class="icon-close-circle remove-icon" style="display:none;"></i>
+                        <a class="icon-selector">Choose icon</a>
+                        <!--  <i class="icon-selector"><a>Choose icon</a></i>-->
+                        <input class="icon-placeholder icon1" id="icon-placeholder" name="icon" type="hidden"/>
+
+                    </div>
+
+                    <div class="row side-elements">
+                        <label>Icon Color:</label>
+                        <input class="jscolor iconColor colorShapes" id="iconColor" value="ffffff"/>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="section-container container-edit" id="op-2-text">
+
+
+            <h4>Basic Settings</h4>
+            <p>Your bar's basic settings</p>
+            <div class="grid">
+
+
+                <div class="card">
+
+                    <div class="section-wrapper" style=" height: 400px !important;">
+                        <h6>BACKGROUND</h6>
+                        <div class="row side-elements">
+                            <label>Background Color:</label>
+                            <input class="jscolor bgColor colorShapes" id="bgColor" value="000000"/>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="slidecontainer">
+                                <label id="opacity-label">Opacity:100%</label>
+                                <input type="range" min="0.1" max="1" value="1" step="0.05" class="slider opacity" id="opacity">
+                            </div>
+                        </div>
+                        <label>Background Image:<a class="clearBgImage">Clear</a></label>
+                        <br />
+                        <div class="row side-elements">
+                            <span class="nav-left"></span>
+                            <div class="slider-parent">
+
+                                <div class="slider-wrapper">
+  <div class="slide-card" data-name="1.png" style="background:url('images/templates/1.png');"></div>
+                                   <div class="slide-card" data-name="2.png" style="background:url('images/templates/2.png');"></div>
+                                   <div class="slide-card" data-name="3.png" style="background:url('images/templates/3.png');"></div>
+                                 <div class="slide-card" data-name="4.png" style="background:url('images/templates/4.png');"></div>
+                                  <div class="slide-card" data-name="5.png" style="background:url('images/templates/5.png');"></div>
+                                  <div class="slide-card" data-name="6.png" style="background:url('images/templates/6.png');"></div>
+                                  <div class="slide-card" data-name="7.png" style="background:url('images/templates/7.png');"></div>
+                                   <div class="slide-card" data-name="8.png" style="background:url('images/templates/8.png');"></div>
+                                <div class="slide-card" data-name="9.png" style="background:url('images/templates/9.png');"></div>
+                                  <div class="slide-card" data-name="10.png" style="background:url('images/templates/10.png');"></div>
+                                <div class="slide-card" data-name="11.png" style="background:url('images/templates/11.png');"></div>
+                                   <div class="slide-card" data-name="12.png" style="background:url('images/templates/12.png');"></div>
+                            <div class="slide-card" data-name="13.png" style="background:url('images/templates/13.png');"></div>
+                                 <div class="slide-card" data-name="14.png" style="background:url('images/templates/14.png');"></div>
+                                 <div class="slide-card" data-name="15.png" style="background:url('images/templates/15.png');"></div>
+                                <div class="slide-card" data-name="16.png" style="background:url('images/templates/16.png');"></div>
+                             <div class="slide-card" data-name="17.png" style="background:url('images/templates/17.png');"></div>
+                           <div class="slide-card" data-name="18.png" style="background:url('images/templates/18.png');"></div>
+                                   <div class="slide-card" data-name="19.png" style="background:url('images/templates/19.png');"></div>
+                                    <div class="slide-card" data-name="20.png" style="background:url('images/templates/20.png');"></div>
+                                   <div class="slide-card" data-name="21.png" style="background:url('images/templates/21.png');"></div>
+                                 <div class="slide-card" data-name="22.png" style="background:url('images/templates/22.png');"></div>
+                             <div class="slide-card" data-name="23.png" style="background:url('images/templates/23.png');"></div>
+                             <div class="slide-card" data-name="24.png" style="background:url('images/templates/24.png');"></div>
+                             <div class="slide-card" data-name="25.png" style="background:url('images/templates/25.png');"></div>
+                                <div class="slide-card" data-name="26.png" style="background:url('images/templates/26.png');"></div>
+                               <div class="slide-card" data-name="27.png" style="background:url('images/templates/27.png');"></div>
+                              <div class="slide-card" data-name="28.png" style="background:url('images/templates/28.png');"></div>
+                                  <div class="slide-card" data-name="29.png" style="background:url('images/templates/29.png');"></div>
+                                  <div class="slide-card" data-name="30.png" style="background:url('images/templates/30.png');"></div>
+                            <div class="slide-card" data-name="31.png" style="background:url('images/templates/31.png');"></div>
+                               <div class="slide-card" data-name="32.png" style="background:url('images/templates/32.png');"></div>
+                            <div class="slide-card" data-name="33.png" style="background:url('images/templates/33.png');"></div>
+                                  <div class="slide-card" data-name="34.png" style="background:url('images/templates/34.png');"></div>
+                                <div class="slide-card" data-name="35.png" style="background:url('images/templates/35.png');"></div>
+                                <div class="slide-card" data-name="36.png" style="background:url('images/templates/36.png');"></div>
+                              <div class="slide-card" data-name="37.png" style="background:url('images/templates/37.png');"></div>
+                                <div class="slide-card" data-name="38.png" style="background:url('images/templates/38.png');"></div>
+                               <div class="slide-card" data-name="39.png" style="background:url('images/templates/39.png');"></div>
+                                 <div class="slide-card" data-name="40.png" style="background:url('images/templates/40.png');"></div>
+                                  <div class="slide-card" data-name="41.png" style="background:url('images/templates/41.png');"></div>
+                                 <div class="slide-card" data-name="42.png" style="background:url('images/templates/42.png');"></div>
+                <div class="slide-card" data-name="43.png" style="background:url('images/templates/43.png');"></div>
+                                <div class="slide-card" data-name="44.png" style="background:url('images/templates/44.png');"></div>
+                           <div class="slide-card" data-name="45.png" style="background:url('images/templates/45.png');"></div>
+             <div class="slide-card" data-name="46.png" style="background:url('images/templates/46.png');"></div>
+                                </div>
+                            </div>
+                            <span class="nav-right"></span>
+                        </div>
+
+                            <input type="hidden" class="img" value="" />
+
+
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="section-wrapper">
+                        <h6>POSITION</h6>
+                        <div class="row">
+                            <label>Bar Position:</label>
+                            <select id="posSelector" class="posSelector">
+                                <option value="top">Top</option>
+                                <option value="bottom">Bottom</option>
+                                <option value="custom">Custom</option>
+                            </select>
+                        </div>
+
+
+                        <div class="code-row row" style="display:none;">
+                            Copy the tag below and paste it into your theme where you'd like the bar to appear:
+                            <a target="_blank" href="https://help.apphero.co/article/31-how-to-insert-the-bar-in-a-custom-location">Learn more</a>
+                            <br/><br />
+                            <div class="row side-elements markdown">
+                                <div id="markdown-body" class="markdown-body">
+                                    &lt;div class='aph_bar_wrapper'&gt;&lt;/div&gt;
+                                </div>
+                                <div class="tooltip">
+                                    <button onclick="copyText()" onmouseout="outFunc()">
+                                        <span class="tooltiptext" id="myTooltip">Copy</span>
+                                        Copy
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <label><input type="checkbox" id="posOnTop" class="posOnTop"/>
+                                Bar moves with scroll
+                            </label>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="section-wrapper">
+                        <h6>EXTRA FUNCTIONS</h6>
+                        <div class="row">
+                            <label>
+                                <input class="user_closable" type="checkbox"/>
+                                Bar can be hidden</label>
+                        </div>
+                        <div class="row">
+                            <label>Hide Button Style:</label>
+                            <select class="bar_dismiss_style" disabled="true">
+                                <option selected>Light</option>
+                                <option>Dark</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--section end -->
+
+
+
+
+        <br />
+        <div class="section-container container-edit" id="op-3-text">
+
+            <h4 class="locked-heading">Targeting
+            </h4>
+
+            <p class="locked-subheading">Show the bar to specific users</p>
+            <div class="grid targeting-grid" style="opacity:1;" data-plan="PRO" >
+                <div class="card">
+                    <div class="section-wrapper" style="height: 129px;">
+                        <h6>Page Targeting</h6>
+                        <p>Choose which pages to have the bar</p>
+                        <div class="row">
+                            <select class="page-target">
+                                <option value="all">Show on every page</option>
+
+                                <option value="home">Show on home page only</option>
+
+                                <option value="collection">Show on collections only</option>
+
+                                <option value="product">Show on products only</option>
+
+                                <option value="custom">Custom page</option>
+
+                            </select>
+                        </div>
+                        <div id="customPageRownew_bar" class="row customPageRow" style="display:none;">
+                            <label>Page URL:</label>
+                            <input class="customPageURL" name="customPageURL" type="text" />
+                            <script>
+
+
+                                masterPages["new_bar"] = [];
+                                masterGeo["new_bar"] = [];
+                                masterDomains["new_bar"] = [];
+                                /*  */
+
+
+
+
+                                $(function(){
+                                    var $select = $('.customPageURL').selectize({
+                                        plugins: ['remove_button'],
+                                        create:true,
+
+
+                                        onItemAdd:function(value,$item) {
+                                            masterPages["new_bar"].push(value);
+                                        },
+                                        onItemRemove:function(value){
+                                            var index = masterPages["new_bar"].indexOf(value);
+                                            if (index !== -1 ) { masterPages["new_bar"].splice(index,1); }
+                                        },
+                                        valueField: 'value',
+                                        labelField: 'value',
+                                        searchField: 'value',
+
+
+                                    });
+
+                                    var selectedDomain = [];
+                                    var $selectDomain = $('#domainnew_bar').selectize({
+                                        plugins: ['remove_button'],
+                                        create:true,
+
+
+                                        onInitialize:function() {
+                                            this.setValue(selectedDomain);
+
+                                        },
+
+                                        onItemAdd:function(value,$item) {
+                                            masterDomains["new_bar"].push(value);
+                                        },
+                                        onItemRemove:function(value){
+                                            var index = masterDomains["new_bar"].indexOf(value);
+                                            if (index !== -1 ) { masterDomains["new_bar"].splice(index,1); }
+                                        },
+                                        valueField: 'value',
+                                        labelField: 'value',
+                                        searchField: 'value',
+
+
+                                    });
+
+                                    //var selectizes = $select[0].selectize;
+
+                                    //selectizes.setValue(selected);
+
+
+                                    var selectedGeo = [];
+                                    var $selectGeo = $('.geoTarget').selectize({
+                                        plugins: ['remove_button'],
+                                        valueField:'alpha-2',
+                                        labelField:'name',
+                                        searchField:'name',
+                                        onFocus:function() {
+                                        },
+                                        onChange:function(value,label) {
+
+                                            if (value != "") {
+                                                var arr = value.split(',');
+                                                for (var i=0; i < arr.length;i++) {
+                                                    var name = $('[data-value="' + arr[i] + '"]').text();
+                                                    name = name.substr(0,name.length-1);
+                                                    arr[i] = {'alpha-2':arr[i], 'name':name};
+
+                                                }
+                                                masterGeo["new_bar"] = arr;
+                                            }
+                                            else {
+                                                masterGeo["new_bar"] = [];
+                                            }
+
+                                        },
+                                        load:function(query, callback) {
+                                            if (!query.length) return callback();
+                                            $.ajax({
+                                                url: 'https://apphero.co/templates/countries.json',
+                                                type: 'GET',
+                                                dataType: 'json',
+                                                data: {
+                                                    name: query,
+                                                },
+                                                error: function() {
+                                                    callback();
+                                                },
+                                                success: function(res) {
+                                                    callback(res);
+                                                }
+                                            });
+                                        }
+                                    });
+
+
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="section-wrapper">
+                        <h6>Subdomain Targeting</h6>
+                        <p>Show your bar on specific subdomains</p>
+                        <div class="row">
+                            <select class="domain-target">
+                                <option value="all">Display on all subdomains</option>
+                                <option value="specific">Display on specific subdomains</option>
+                                <option value="main">Display on main domain only</option>
+                            </select>
+                            <br/>
+                            <div id="subDomainRownew_bar" class="row" style="display:none;">
+                                <label>Subdomains: <a href='https://help.apphero.co/article/19-how-do-i-enter-my-subdomain-for-subdomain-targeting' target='_blank'>Learn More</a></label>
+                                <input id="domainnew_bar" class="domainTarget" name="domainTarget" type="text" />
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="section-wrapper">
+                        <h6>DEVICE TARGETING</h6>
+                        <p>Show the bar on certain device types</p>
+                        <div class="row">
+
+                            <input class="cta_radio device_radio" name="device_target-new_bar" type="radio" value="0" checked/>Show on all devices<br/>
+                            <input class="cta_radio device_radio" name="device_target-new_bar" type="radio" value="1" />Show on desktop only<br/>
+                            <input class="cta_radio device_radio" name="device_target-new_bar" type="radio" value="2" />Show on mobile only<br/>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="section-wrapper">
+                        <h6>Geotargeting</h6>
+                        <p>Show the bar to people living in certain countries</p>
+                        <label>Country:</label>
+                        <input class="geoTarget" name="geoTarget" type="text" />
+                    </div>
+                    <br />
+                    <div class="section-wrapper">
+                        <h6>User Source Targeting</h6>
+                        <p>Show the bar to visitors coming from a specific website</p>
+                        <div class="row">
+                            <label>Source:</label>
+                            <select class="user_source">
+                                <option value="disabled">All Sources</option>
+                                <option value="facebook.com">Facebook</option>
+                                <option value="instagram.com">Instagram</option>
+                                <option value="t.co">Twitter</option>
+                                <option value="google.com">Google</option>
+                                <option value="pinterest.com">Pinterest</option>
+                                <option value="custom">Custom URL</option>
+                                <option value="utm">UTM Code</option>
+                            </select>
+                        </div>
+                        <div class="row utm_row">
+                            <label>UTM Code</label>
+                            <input class="utm_val" name="utm_val" type="text" placeholder="ex:utm_source=email"/>
+                        </div>
+                        <div class="row source_url_row">
+                            <label>UTM Code</label>
+                            <input class="source_url" name="source_url" type="text" placeholder="domain.com"/>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="btns-container">
+            <button class="button" id="saveBtn">Save</button>
+            <button class="secondary" id="btn-cancel">Cancel</button>
+
+        </div>
+
+
+    </section>
+    <footer></footer>
+
+    <div id="ex1" class="mod">
+        <!--<div class="pop-bg"></div>-->
+
+        <h1 class="mod-title">GO PRO</h1>
+        <p class="mod-body">This is a pro feature, upgrade to Pro Plan to unlock it, and enjoy unlimited impressions each month.
+        </p>
+
+        <div class="modal-upgrade">Upgrade</div>
+    </div>
+
+
+    <div id="name_modal" class="mod">
+        <h4 class="name-mod_title">Name Your Bar</h4>
+        <hr/>
+        <div class="row name-mod_row">
+            <label>What would you like to name your bar? (This will only be visible to you)</label>
+            <input name="bar_name" class="bar_name" type="text" />
+        </div>
+        <hr/>
+        <div class="row">
+            <button class="button primary name-mod_confirm">Save</button>
+            <a href="#name_modal" rel="mod:close"><button class="button secondary name-mod_cancel">Cancel</button></a>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<div id="messageElement_modal" class="mod">
+    <h4 class="messageElement-mod_title">Delete message?</h4>
+    <hr/>
+    <div class="row messageElement-mod_row">
+        <label>Are you sure you want to delete this message?</label>
+
+    </div>
+    <hr/>
+    <div class="row">
+        <button class="button primary messageElement-mod_confirm warning">Yes</button>
+        <a href="#messageElement_modal" rel="mod:close"><button class="button secondary messageElement-mod_cancel">No</button></a>
+
+
+    </div>
+    <input type="hidden" id="elementId" value=""/>
+    <input type="hidden" id="elementIndex" value="" />
+
+</div>
+<script>
+    const btn1 = document.getElementById("op-1");
+    const btn2 = document.getElementById("op-2");
+    const btn3 = document.getElementById("op-3");
+    const opt1text = document.getElementById("op-1-text");
+    const opt2text = document.getElementById("op-2-text");
+    const opt3text = document.getElementById("op-3-text");
+    btn1.style.borderBottom = "0.3rem solid #1c2260";
+    btn2.style.borderBottom = "none";
+    btn3.style.borderBottom = "none";
+    opt1text.style.display = "block";
+    opt2text.style.display = "none";
+    opt3text.style.display = "none";
+
+    btn1.onclick = function(){
+        opt1text.style.display = "block";
+        opt2text.style.display = "none";
+        opt3text.style.display = "none";
+        btn1.style.borderBottom = "0.3rem solid #1c2260";
+        btn3.style.borderBottom = "none";
+        btn2.style.borderBottom = "none";
+
+    }
+    btn2.onclick = function(){
+
+        opt1text.style.display = "none";
+        opt2text.style.display = "block";
+        opt3text.style.display = "none";
+        btn1.style.borderBottom = "none";
+        btn2.style.borderBottom = "0.3rem solid #1c2260";
+        btn3.style.borderBottom = "none";
+
+
+    }
+    btn3.onclick = function(){
+        opt1text.style.display = "none";
+        opt2text.style.display = "none";
+        opt3text.style.display = "block";
+        btn1.style.borderBottom = "none";
+        btn2.style.borderBottom = "none";
+        btn3.style.borderBottom = "0.3rem solid #1c2260";
+    }
+</script>
+
+</body>
+</html>
